@@ -1,0 +1,46 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/flexbox';
+
+.loderWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loder {
+  position: relative;
+  min-width: 11px;
+  font-size: 60px;
+  line-height: 70px;
+  /* stylelint-disable-next-line scale-unlimited/declaration-strict-value */
+  color: transparent;
+  white-space: nowrap;
+}
+
+.loder::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: colors.$BLACK;
+  content: '🌕 🌖🌗🌘🌑🌒🌓🌔 🌕';
+  animation: typing 3s infinite;
+}
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}

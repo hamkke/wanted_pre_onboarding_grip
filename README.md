@@ -1,4 +1,19 @@
-# 영화 검색 React app 만들어 보기
+# 영화 검색 React app 만들어 보기 
+
+- react
+- redux-toolkit
+- axios
+- react-query 
+- react-router
+- store.js(기본구현5번)
+
+- 영화 목록 API : https://www.omdbapi.com
+
+- 무한 스크롤 가능(react-query useInfiniteQuery로 만들어 보기)
+- 좋아요 목록 드로그앤드롭 가능
+
+# 디자인(초기)
+<img width="1920" alt="movie_app_design_main" src="https://user-images.githubusercontent.com/46497281/179384086-35a38bd4-4eb0-4daf-bfd2-57751873a72a.png">
 
 ## 개발 요건
 1. 디자인은 과제의 평가와 무관하며 자유롭게 작업해주시면 됩니다.

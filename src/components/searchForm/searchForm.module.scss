@@ -1,0 +1,36 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/flexbox';
+
+.formBox {
+  @include flexbox.flexbox(between, center);
+  width: 80%;
+  padding-left: 15px;
+  background-color: colors.$WHITE;
+  border-radius: 10px;
+  @include responsive.after(ML) {
+    width: 65%;
+  }
+  @include responsive.after(SD) {
+    width: 60%;
+  }
+  @include responsive.after(MD) {
+    width: 45%;
+  }
+
+  & input {
+    width: 80%;
+    padding-right: 15px;
+  }
+
+  & button {
+    width: 20%;
+    padding: 15px;
+    font-weight: bold;
+    color: colors.$WHITE;
+    background-color: colors.$SKY;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

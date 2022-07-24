@@ -1,0 +1,46 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/animation';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/flexbox';
+
+.tapWrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-width: 375px;
+  padding: 20px 0;
+  background-color: colors.$WHITE;
+  @include flexbox.flexbox(center, center);
+
+  & ul {
+    width: calc(36vw + 170px);
+    @include flexbox.flexbox(between, center);
+    @include responsive.after(MD) {
+      width: 32%;
+    }
+  }
+
+  & li {
+    width: 48%;
+    text-align: center;
+    border: 1px solid colors.$SKY;
+    border-radius: 22px;
+    @include animation.cubicBezier(0.2s);
+
+    &:hover {
+      background-color: colors.$SKY;
+    }
+
+    & a {
+      display: block;
+      width: 100%;
+      line-height: 40px;
+      color: colors.$GRAY6;
+    }
+
+    & .isActive {
+      font-weight: bold;
+      color: colors.$ORANGE;
+    }
+  }
+}

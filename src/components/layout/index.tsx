@@ -1,16 +1,15 @@
 import { Outlet } from 'react-router-dom'
-import { FavIcon } from 'assets/svgs'
 import styles from './layout.module.scss'
+
+import Tab from 'components/tab'
 
 const Layout = () => {
   return (
     <div className={styles.wrap}>
-      <header>header</header>
-      <FavIcon />
-      <main>
+      <main className={styles.mainWrap}>
         <Outlet />
       </main>
-      <div>hello</div>
+      <Tab />
     </div>
   )
 }
